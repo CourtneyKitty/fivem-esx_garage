@@ -130,6 +130,16 @@ end, function(source, args, user)
 	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficient Permissions.")
 end)
 
+RegisterServerEvent('esx_garage:responseSaveVehicle')
+AddEventHandler('esx_garage:responseSaveVehicle', function(vehicleData)
+	
+	local file = io.open('resources/[esx]/esx_garage/vehicles.txt', "a")
+
+	file:write(json.encode(vehicleData) .. "\n")
+	file:flush()
+	file:close()
+end)
+
 RegisterServerEvent('esx_garage:requestResell')
 AddEventHandler('esx_garage:requestResell', function(plate, cost)
 

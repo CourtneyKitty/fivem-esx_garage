@@ -96,11 +96,11 @@ function SetVehicleProperties(vehicle, props)
 		SetVehicleExtraColours(vehicle,  props.pearlescentColor,  props.wheelColor)
 	end
 
-	if props.wheels then
+	if props.wheels ~= nil then
 		SetVehicleWheelType(vehicle,  props.wheels)
 	end
 
-	if props.windowTint then
+	if props.windowTint ~= nil then
 		SetVehicleWindowTint(vehicle,  props.windowTint)
 	end
 
@@ -108,90 +108,89 @@ function SetVehicleProperties(vehicle, props)
 		SetVehicleNeonLightsColour(vehicle,  props.neonColor[1], props.neonColor[2], props.neonColor[3])
 	end
 
-	if props.modSpoilers then
+	if props.modSpoilers ~= nil then
 		SetVehicleMod(vehicle, 0, props.modSpoilers, false)
 	end
 
-	if props.modFrontBumper then
+	if props.modFrontBumper ~= nil then
 		SetVehicleMod(vehicle, 1, props.modFrontBumper, false)
 	end
 
-	if props.modRearBumper then
+	if props.modRearBumper ~= nil then
 		SetVehicleMod(vehicle, 2, props.modRearBumper, false)
 	end
 
-	if props.modSideSkirt then
+	if props.modSideSkirt ~= nil then
 		SetVehicleMod(vehicle, 3, props.modSideSkirt, false)
 	end
 
-	if props.modExhaust then
+	if props.modExhaust ~= nil then
 		SetVehicleMod(vehicle, 4, props.modExhaust, false)
 	end
 
-	if props.modFrame then
+	if props.modFrame ~= nil then
 		SetVehicleMod(vehicle, 5, props.modFrame, false)
 	end
 
-	if props.modGrille then
+	if props.modGrille ~= nil then
 		SetVehicleMod(vehicle, 6, props.modGrille, false)
 	end
 
-	if props.modHood then
+	if props.modHood ~= nil then
 		SetVehicleMod(vehicle, 7, props.modHood, false)
 	end
 
-	if props.modFender then
+	if props.modFender ~= nil then
 		SetVehicleMod(vehicle, 8, props.modFender, false)
 	end
 
-	if props.modRightFender then
+	if props.modRightFender ~= nil then
 		SetVehicleMod(vehicle, 9, props.modRightFender, false)
 	end
 
-	if props.modRoof then
+	if props.modRoof ~= nil then
 		SetVehicleMod(vehicle, 10, props.modRoof, false)
 	end
 
-	if props.modEngine then
+	if props.modEngine ~= nil then
 		SetVehicleMod(vehicle, 11, props.modEngine, false)
 	end
 
-	if props.modBrakes then
+	if props.modBrakes ~= nil then
 		SetVehicleMod(vehicle, 12, props.modBrakes, false)
 	end
 
-	if props.modTransmission then
+	if props.modTransmission ~= nil then
 		SetVehicleMod(vehicle, 13, props.modTransmission, false)
 	end
 
-	if props.modHorns then
+	if props.modHorns ~= nil then
 		SetVehicleMod(vehicle, 14, props.modHorns, false)
 	end
 
-	if props.modSuspension then
+	if props.modSuspension ~= nil then
 		SetVehicleMod(vehicle, 15, props.modSuspension, false)
 	end
 
-	if props.modArmor then
+	if props.modArmor ~= nil then
 		SetVehicleMod(vehicle, 16, props.modArmor, false)
 	end
 
-	if props.modTurbo then
-		SetVehicleMod(vehicle, 18, props.modTurbo, false)
+	if props.modTurbo ~= nil then
+		ToggleVehicleMod(vehicle,  18, props.modTurbo)
 	end
 
-	if props.modXenon then
-		SetVehicleMod(vehicle, 22, props.modXenon, false)
+	if props.modXenon ~= nil then
+		ToggleVehicleMod(vehicle,  22, props.modXenon)
 	end
 
-	if props.modFrontWheels then
+	if props.modFrontWheels ~= nil then
 		SetVehicleMod(vehicle, 23, props.modFrontWheels, false)
 	end
 
-	if props.modBackWheels then
+	if props.modBackWheels ~= nil then
 		SetVehicleMod(vehicle, 24, props.modBackWheels, false)
 	end
-
 
 end
 
