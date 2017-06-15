@@ -326,6 +326,26 @@ local vehshop = {
 		},
 	}
 }
+
+local cats = {'vehicles', 'compacts', 'coupes', 'sports', 'sportsclassics', 'super', 'muscle', 'offroad', 'suvs', 'vans', 'sedans', 'motorcycles'}
+
+function GetVehicleCost(model)
+	for i=1, #cats, 1 do
+		for j=1, #vehshop.menu[cats[i]].buttons, 1 do
+			local button = vehshop.menu[cats[i]].buttons[j]
+			if GetHashKey(button.model) == model or button.model == model then
+				return button.costs
+			end
+		end
+	end
+	return -1
+end
+
+AddEventHandler('vehshop:getVehicleCost', function(model, cb)
+	local cost = GetVehicleCost(model)
+	cb(cost)
+end)
+
 local fakecar = {model = '', car = nil}
 local vehshop_locations = {
 {entering = {-33.803,-1102.322,25.422}, inside = {-46.56327,-1097.382,25.99875, 120.1953}, outside = {-31.849,-1090.648,25.998,322.345}},
